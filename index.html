@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Hello, world!</title>
+    <style>
+        body {
+            background-color: #0a001d;
+            color: white;
+        }
+        /*   .sasd{
+            height: 450px;
+        }*/
+        .bg {
+            background-color: #0c002a;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0,0,0,.3);
+            transition: .5s;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .bg::before {
+                content: '';
+                background-color: rgba(255,255,255,.1);
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 50%;
+                z-index: 2;
+            }
+
+        .sasd .sect p {
+            font-size: 1.2em;
+        }
+
+        .sasd .sect {
+            /*  opacity:0;
+            transform:translateY(100px);*/
+            transition: .5s;
+        }
+
+        .sasd:hover .sect {
+            opacity: 1;
+            transform: translateY(0px)
+        }
+
+            .sasd:hover .sect p, .sasd:hover .sect h1, .sasd:hover .sect button {
+                opacity: 1;
+            }
+
+        .sasd .sect p, .sasd .sect h1, .sasd .sect button {
+            opacity: .5;
+            transition: .5s;
+        }
+
+        .sasd:hover .headers {
+            top: 10px;
+            opacity: 1;
+        }
+
+        .headers {
+            transition: .5s;
+            position: absolute;
+            top: 100px;
+            right: 20px;
+            font-size: 6em;
+            opacity: .1;
+            color: #1677fc;
+            font-weight: bold;
+            user-select: none;
+        }
+
+        .btn {
+            font-size: 1.2em;
+            z-index: 1;
+        }
+
+        .container .sasd {
+            transition: .5s;
+        }
+
+        .container:hover .sasd {
+            opacity: .1;
+        }
+
+        .container .sasd:hover {
+            opacity: 1;
+        }
+
+        .bg span {
+            position: absolute;
+            border-radius: 20px;
+        }
+
+            .bg span:nth-child(1),
+            .bg span:nth-child(3) {
+                width: 100%;
+                height: 2px;
+            }
+
+            .bg span:nth-child(2),
+            .bg span:nth-child(4) {
+                width: 2px;
+                height: 100%;
+            }
+
+            .bg span:nth-child(1) {
+                top: 0;
+                left: 0;
+                animation: example 1s linear infinite;
+                background: linear-gradient(-90deg,#1677fc,transparent);
+            }
+
+            .bg span:nth-child(2) {
+                top: 0%;
+                right: 0;
+                animation: example_01 1s linear infinite;
+                background: linear-gradient(0deg,#1677fc,transparent);
+                animation-delay: .25s;
+            }
+
+            .bg span:nth-child(3) {
+                bottom: 0;
+                right: 0;
+                animation: example_02 1s linear infinite;
+                background: linear-gradient(90deg,#1677fc,transparent);
+            }
+
+            .bg span:nth-child(4) {
+                left: 0;
+                bottom: 0;
+                animation: example_03 1s linear infinite;
+                background: linear-gradient(180deg,#1677fc,transparent);
+                animation-delay: .25s;
+            }
+
+        .content {
+            position: relative;
+            z-index: 2
+        }
+
+        @keyframes example {
+            0% {
+                left: -100%;
+            }
+
+            50%,100% {
+                left: 100%;
+            }
+        }
+
+        @keyframes example_01 {
+            0% {
+                top: -100%;
+            }
+
+            50%,100% {
+                top: 100%;
+            }
+        }
+
+        @keyframes example_02 {
+            50%,100% {
+                right: 100%;
+            }
+
+            0% {
+                right: -100%;
+            }
+        }
+
+        @keyframes example_03 {
+            50%,100% {
+                bottom: 100%;
+            }
+
+            0% {
+                bottom: -100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container pt-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3  ">
+            <div class="col text-center p-3  sasd position-relative d-flex justify-content-center align-items-center">
+                <div class="bg overflow-hidden w-100  px-5 py-4">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>                            <h1 class="headers">01</h1>
+
+                    <div class="content">
+
+                        <div class="sect py-5">
+                            <h1>Card One</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error obcaecati expedita, beatae mollitia quas enim!
+                            </p>
+                            <button class="btn btn-light rounded-0 text-uppercase fw-bold ">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center p-3  sasd position-relative d-flex justify-content-center align-items-center">
+                <div class="bg overflow-hidden w-100  px-5 py-4">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <h1 class="headers">02</h1>
+
+                    <div class="content">
+
+
+                        <div class="sect py-5">
+                            <h1>Card Two</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error obcaecati expedita, beatae mollitia quas enim!
+                            </p>
+                            <button class="btn btn-light rounded-0 text-uppercase fw-bold ">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center p-3  sasd position-relative d-flex justify-content-center align-items-center">
+                <div class="bg overflow-hidden w-100  px-5 py-4">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <h1 class="headers">03</h1>
+
+
+
+                    <div class="content">
+                        <div class="sect py-5">
+                            <h1>Card Three</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error obcaecati expedita, beatae mollitia quas enim!
+                            </p>
+                            <button class="btn btn-light rounded-0 text-uppercase fw-bold ">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".sasd .bg"), {
+            max: 25,
+            speed: 400, glare: true,  // if it should have a "glare" effect
+            "max-glare": 1, scale: 1, "glare-prerender": false
+        });
+        //It also supports NodeList
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
